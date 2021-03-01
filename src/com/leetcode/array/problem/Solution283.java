@@ -5,6 +5,7 @@ package com.leetcode.array.problem;
  * @Description: Move Zeroes
  * @author: 薛佳豪
  * @date: 2021-3-1 16:40
+ * @link: https://leetcode.com/problems/move-zeroes/
  */
 public class Solution283 {
     public void moveZeroes(int[] nums) {
