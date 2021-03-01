@@ -3,7 +3,7 @@ package com.leetcode.array.problem;
 /**
  * @version V1.0
  * @Description: Move Zeroes
- * @author: 薛佳豪
+ * @author: ives
  * @date: 2021-3-1 16:40
  * @link: https://leetcode.com/problems/move-zeroes/
  */
