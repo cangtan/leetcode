@@ -1,20 +1,15 @@
 package com.leetcode.array.problem;
 
-import sun.font.GlyphLayout;
-
 /**
+ * 盛最多水的容器
  * @version V1.0
- * @Description: 盛最多水的容器
- * @author: ives
- * @date: 2020-12-21 17:19
- * @link: https://leetcode.com/problems/container-with-most-water
+ * @author ives
+ * @date 2020-12-21 17:19
+ * @link https://leetcode.com/problems/container-with-most-water
+ * 双指针遍历
  */
 public class Solution11 {
-    /**
-     * Two Pointers
-     * @param height
-     * @return
-     */
+
     public int maxArea(int[] height) {
         int result = 0;
         int left = 0;

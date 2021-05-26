@@ -1,11 +1,11 @@
 package com.leetcode.array.problem;
 
 /**
+ * Move Zeroes
  * @version V1.0
- * @Description: Move Zeroes
- * @author: ives
- * @date: 2021-3-1 16:40
- * @link: https://leetcode.com/problems/move-zeroes/
+ * @author ives
+ * @date 2021-3-1 16:40
+ * @link https://leetcode.com/problems/move-zeroes/
  */
 public class Solution283 {
     public void moveZeroes(int[] nums) {
