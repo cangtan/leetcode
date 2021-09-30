@@ -2,8 +2,6 @@ package com.leetcode.linked.problem;
 
 import com.leetcode.linked.ListNode;
 
-import java.util.Currency;
-
 /**
  * 两两交换链表中的节点
  *
