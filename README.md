@@ -2,6 +2,18 @@
 
 力扣网址: https://leetcode.com/
 
+## 包结构说明
+
+> array 数组相关题目
+>
+> linked 链表相关题目
+>
+> sort 排序相关题目
+>
+> 
+
+
+
 ## 数组array
 
 思路：
