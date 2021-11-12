@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 3sum
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @date 2021-3-1 17:15
  * @link https://leetcode-cn.com/problems/3sum/

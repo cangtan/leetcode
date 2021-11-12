@@ -1,13 +1,11 @@
 package com.leetcode.sort.example;
 
-import java.util.Arrays;
-import java.util.Comparator;
 
 /**
+ * 桶排序(也可以不用int数组，借助map)
  * @version V1.0
- * @Description: 桶排序(也可以不用int数组，借助map)
- * @author: 薛佳豪
- * @date: 2020-3-31 10:56
+ * @author cangtan
+ * @date 2020-3-31 10:56
  */
 public class BucketSort {
     public BucketSort(){

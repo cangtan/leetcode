@@ -5,7 +5,7 @@ import com.leetcode.linked.ListNode;
 /**
  * 两两交换链表中的节点
  *
- * @author ives
+ * @author cangtan
  * @version V1.0
  * @date 2021-05-26 14:43:00
  * @link https://leetcode-cn.com/problems/swap-nodes-in-pairs/

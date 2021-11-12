@@ -1,11 +1,11 @@
 package com.leetcode.sort.example;
 
 /**
- * @version V1.0
- * @Description: 快速排序，选取基数，从两头向数组中心进行比较与交换，
+ * 快速排序，选取基数，从两头向数组中心进行比较与交换，
  * 找到基数的排序位置，以该位置将数组划分为两部分，两部分再选出基数，以此递归。
- * @author: ives
- * @date: 2020-3-31 11:19
+ * @version V1.0
+ * @author ives
+ * @date 2020-3-31 11:19
  */
 public class QuickSort {
     public static void main(String[] args) {

@@ -1,15 +1,11 @@
 package com.leetcode.linked.problem;
 
-import com.leetcode.array.problem.Solution15;
 import com.leetcode.linked.ListNode;
-
-import javax.swing.*;
-import java.util.List;
 
 /**
  * 反转链表
  *
- * @author ives
+ * @author cangtan
  * @version V1.0
  * @date 2021-05-26 13:56:00
  * @link https://leetcode-cn.com/problems/reverse-linked-list/

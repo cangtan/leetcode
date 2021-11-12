@@ -5,7 +5,7 @@ import javax.xml.transform.Result;
 /**
  * climbing stairs
  * @version V1.0
- * @author ives
+ * @author cangtan
  * @date 2021-3-1 16:55
  * @link https://leetcode.com/problems/climbing-stairs/
  * 这题思路我是卡在了没有想到下一阶梯的方案是前两阶梯方案数之和

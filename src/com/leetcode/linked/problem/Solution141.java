@@ -5,7 +5,7 @@ import com.leetcode.linked.ListNode;
 /**
  * 环形链表
  *
- * @author ives
+ * @author cangtan
  * @version V1.0
  * @date 2021-05-26 15:29:00
  * @link https://leetcode-cn.com/problems/linked-list-cycle/
