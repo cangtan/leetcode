@@ -3,7 +3,7 @@ package com.leetcode.queue.dequeue;
 /**
  * 设计循环双端队列
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @date 2021-12-16 16:52:00
  */
