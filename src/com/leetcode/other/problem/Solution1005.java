@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
  * @author cangtan
  * @version V1.0
  * @date 2021-12-15 11:43:00
- * @link
+ * @see <a href="https://leetcode.cn/problems/maximize-sum-of-array-after-k-negations/">K 次取反后最大化的数组和</a>
  */
 public class Solution1005 {
 

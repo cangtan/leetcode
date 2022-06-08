@@ -3,9 +3,10 @@ package com.leetcode.other.problem;
 /**
  * 连续字符
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @date 2021-12-01 14:34:00
+ * @see <a href="https://leetcode.cn/problems/consecutive-characters/">连续字符</a>
  */
 public class Solution1446 {
     public int maxPower(String s) {

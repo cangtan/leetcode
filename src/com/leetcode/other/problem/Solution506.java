@@ -10,7 +10,7 @@ import java.util.Map;
  * @author cangtan
  * @version V1.0
  * @date 2021-12-02 13:58:00
- * @link https://leetcode-cn.com/problems/relative-ranks/
+ * @see <a href="https://leetcode-cn.com/problems/relative-ranks/">相对名次</a>
  */
 public class Solution506 {
     public String[] findRelativeRanks(int[] score) {
