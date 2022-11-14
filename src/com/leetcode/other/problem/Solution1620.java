@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 网络信号最好的坐标
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @see <a href="https://leetcode.cn/problems/coordinate-with-maximum-network-quality/comments/">网络信号最好的坐标</a>
  * @since 2022-11-03 18:47:00
