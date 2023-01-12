@@ -1,5 +1,9 @@
 package com.leetcode.other.problem;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * 判断句子是否为全字母句
  *
@@ -9,7 +13,6 @@ package com.leetcode.other.problem;
  * @see <a href="https://leetcode.cn/problems/check-if-the-sentence-is-pangram/">判断句子是否为全字母句</a>
  */
 public class Solution1823 {
-
     public boolean checkIfPangram(String sentence) {
         // 二进制储存
         int result = 0;
