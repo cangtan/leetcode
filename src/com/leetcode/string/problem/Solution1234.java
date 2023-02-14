@@ -3,7 +3,7 @@ package com.leetcode.string.problem;
 /**
  * 替换子串得到平衡字符串
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @since 2023-02-13 14:28:00
  */
