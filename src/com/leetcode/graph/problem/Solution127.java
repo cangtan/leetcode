@@ -19,24 +19,81 @@ public class Solution127 {
     private final List<List<Integer>> edgeList = new LinkedList<>();
     private int counter = 0;
 
+//    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+//        wordList.forEach(this::addEdge);
+//        if (!wordIdMap.containsKey(endWord)) {
+//            return 0;
+//        }        addEdge(beginWord);
+//        int[] dist = new int[counter];
+//        Arrays.fill(dist, Integer.MAX_VALUE);
+//        Queue<Integer> queue = new LinkedList<>();
+//        Integer beginWordId = wordIdMap.get(beginWord);
+//        queue.offer(beginWordId);
+//        dist[beginWordId] = 0;
+//        while (!queue.isEmpty()) {
+//            Integer current = queue.poll();
+//            if (current.equals(wordIdMap.get(endWord))) {
+//                return dist[current] / 2 + 1;
+//            }
+//            for (Integer next : edgeList.get(current)) {
+//                if (dist[next] == Integer.MAX_VALUE) {
+//                    dist[next] = dist[current] + 1;
+//                    queue.offer(next);
+//                }
+//            }
+//        }
+//        return 0;
+//    }
+
+    /**
+     * 双向BFS
+     */
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         wordList.forEach(this::addEdge);
+        if (!wordIdMap.containsKey(endWord)) {
+            return 0;
+        }
         addEdge(beginWord);
-        int[] dist = new int[counter];
-        Arrays.fill(dist, Integer.MAX_VALUE);
-        Queue<Integer> queue = new LinkedList<>();
+        int[] beginDist = new int[counter];
+        Arrays.fill(beginDist, Integer.MAX_VALUE);
+        Queue<Integer> beginQueue = new LinkedList<>();
         Integer beginWordId = wordIdMap.get(beginWord);
-        queue.offer(beginWordId);
-        dist[beginWordId] = 0;
-        while (!queue.isEmpty()) {
-            Integer current = queue.poll();
-            if (current.equals(wordIdMap.get(endWord))) {
-                return dist[current] / 2 + 1;
+        beginQueue.offer(beginWordId);
+        beginDist[beginWordId] = 0;
+
+        Queue<Integer> endQueue = new LinkedList<>();
+        Integer endWordId = wordIdMap.get(endWord);
+        endQueue.offer(endWordId);
+        int[] endDist = new int[counter];
+        Arrays.fill(endDist, Integer.MAX_VALUE);
+        endDist[endWordId] = 0;
+
+        while (!beginQueue.isEmpty() && !endQueue.isEmpty()) {
+            int beginQueueSize = beginQueue.size();
+            for (int i = 0; i < beginQueueSize; i++) {
+                Integer beginCursor = beginQueue.poll();
+                if (endDist[beginCursor] != Integer.MAX_VALUE) {
+                    return (beginDist[beginCursor] + endDist[beginCursor]) / 2 + 1;
+                }
+                for (Integer next : edgeList.get(beginCursor)) {
+                    if (beginDist[next] == Integer.MAX_VALUE) {
+                        beginDist[next] = beginDist[beginCursor] + 1;
+                        beginQueue.offer(next);
+                    }
+                }
             }
-            for (Integer next : edgeList.get(current)) {
-                if (dist[next] == Integer.MAX_VALUE) {
-                    dist[next] = dist[current] + 1;
-                    queue.offer(next);
+
+            int endQueueSize = endQueue.size();
+            for (int i = 0; i < endQueueSize; i++) {
+                Integer endCursor = endQueue.poll();
+                if (beginDist[endCursor] != Integer.MAX_VALUE) {
+                    return (beginDist[endCursor] + endDist[endCursor]) / 2 + 1;
+                }
+                for (Integer next : edgeList.get(endCursor)) {
+                    if (endDist[next] == Integer.MAX_VALUE) {
+                        endDist[next] = endDist[endCursor] + 1;
+                        endQueue.offer(next);
+                    }
                 }
             }
         }
