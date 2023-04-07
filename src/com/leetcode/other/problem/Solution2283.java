@@ -3,7 +3,7 @@ package com.leetcode.other.problem;
 /**
  * 判断一个数的数字计数是否等于位数的值
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @since 2023-01-11 09:40:00
  */

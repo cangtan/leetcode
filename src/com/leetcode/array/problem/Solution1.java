@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * 两数之和
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @since 2023-01-18 10:54:00
  */

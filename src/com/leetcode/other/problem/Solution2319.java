@@ -4,7 +4,7 @@ package com.leetcode.other.problem;
 /**
  * 判断矩阵是否是一个X矩阵
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @since 2023-01-31 16:57:00
  */

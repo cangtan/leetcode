@@ -3,7 +3,7 @@ package com.leetcode.other.problem;
 /**
  * 找到最近的有相同X或Y坐标的点
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @since 2022-12-01 09:12:00
  */
