@@ -3,7 +3,7 @@ package com.leetcode.dp.problem;
 /**
  * 最长公共子序列
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @since 2023-04-11 15:09:00
  */
