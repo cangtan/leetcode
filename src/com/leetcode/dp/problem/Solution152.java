@@ -25,11 +25,29 @@ public class Solution152 {
         fmin[0] = nums[0];
         int result = nums[0];
         for (int i = 1; i < nums.length; i++) {
+            // 发现只和前一位有关，可以以滚动数组的思想优化
             fmax[i] = Math.max(fmax[i - 1] * nums[i], Math.max(nums[i], fmin[i - 1] * nums[i]));
             fmin[i] = Math.min(fmax[i - 1] * nums[i], Math.min(nums[i], fmin[i - 1] * nums[i]));
             result = Math.max(result, fmax[i]);
         }
         return result;
+    }
+
+    public int maxProduct2(int[] nums) {
+        int temp = 1;
+        int max = nums[0];
+        for (int i = 0; i < nums.length; i++) {
+            temp *= nums[i];
+            max = Math.max(max, temp);
+            if (nums[i] == 0) temp = 1;
+        }
+        temp = 1;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            temp *= nums[i];
+            max = Math.max(max, temp);
+            if (nums[i] == 0) temp = 1;
+        }
+        return max;
     }
 
     public int maxProductForce(int[] nums) {
@@ -55,6 +73,6 @@ public class Solution152 {
         // 以3结尾的数组 => max = 6
         // 以-2结尾的数组 => 6 * -2, 6 => max = 6
         // 以-3 结尾 只有出现负数的时候 1.前面是否有负数
-        System.out.println(solution.maxProduct(nums));
+        System.out.println(solution.maxProduct2(nums));
     }
 }
