@@ -3,7 +3,7 @@ package com.leetcode.dp.problem;
 /**
  * 买卖股票的最佳时机
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @since 2023-04-18 10:25:00
  */
