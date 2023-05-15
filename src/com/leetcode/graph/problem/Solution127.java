@@ -129,7 +129,7 @@ public class Solution127 {
      * 广搜
      */
     public int ladderLength2(String beginWord, String endWord, List<String> wordList) {
-        if(wordList == null||wordList.size()==0) return 0;
+        if (wordList == null || wordList.isEmpty()) return 0;
         HashSet<String> start = new HashSet<>();
         HashSet<String> end = new HashSet<>();
         //直接对List建立HashSet
@@ -137,26 +137,27 @@ public class Solution127 {
         start.add(beginWord);
         end.add(endWord);
         //检查endword是否在wordlist中
-        if(!dic.contains(endWord)) return 0;
-        return bfs(start,end,dic,2);
+        if (!dic.contains(endWord)) return 0;
+        return bfs(start, end, dic, 2);
 
     }
-    public int bfs(HashSet<String> st, HashSet<String> end, HashSet<String> dic, int l){
-        if(st.size() == 0) return 0;
-        if(st.size()>end.size()) return bfs(end,st,dic,l);
+
+    public int bfs(HashSet<String> st, HashSet<String> end, HashSet<String> dic, int l) {
+        if (st.isEmpty()) return 0;
+        if (st.size() > end.size()) return bfs(end, st, dic, l);
         //标记 用过的不重复
         dic.removeAll(st);
         HashSet<String> next = new HashSet<>();
-        for(String s:st){
+        for (String s : st) {
             char[] chars = s.toCharArray();
-            for(int i =0;i<chars.length;i++) {
+            for (int i = 0; i < chars.length; i++) {
                 char temp = chars[i];
-                for(char c ='a'; c<='z';c++){
-                    if(temp == c) continue;
+                for (char c = 'a'; c <= 'z'; c++) {
+                    if (temp == c) continue;
                     chars[i] = c;
                     String nstr = new String(chars);
-                    if(dic.contains(nstr)){
-                        if(end.contains(nstr)) return l;
+                    if (dic.contains(nstr)) {
+                        if (end.contains(nstr)) return l;
                         else next.add(nstr);
                     }
 
@@ -165,7 +166,7 @@ public class Solution127 {
 
             }
         }
-        return bfs(next,end,dic,l+1);
+        return bfs(next, end, dic, l + 1);
     }
 
     public static void main(String[] args) {
