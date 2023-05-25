@@ -21,13 +21,14 @@ public class MergeSort {
         if (right <= left) {
             return;
         }
-        int mid = (left + right) >> 1;
+        int mid = left + ((right - left) >> 1);
         mergeSort(arr, left, mid);
         mergeSort(arr, mid + 1, right);
         merge(arr, left, mid, right);
     }
 
     public void merge(int[] arr, int left, int mid, int right) {
+        // 中间数组
         int[] temp = new int[right - left + 1];
         int i = left;
         int j = mid + 1;
