@@ -3,7 +3,7 @@ package com.leetcode.dp.problem;
 /**
  * 打家劫舍II
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @since 2023-04-17 16:46:00
  */

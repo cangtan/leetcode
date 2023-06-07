@@ -3,7 +3,7 @@ package com.leetcode.string.problem;
 /**
  * 字符串中的第一个唯一字符
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @since 2023-06-05 17:41:00
  */
