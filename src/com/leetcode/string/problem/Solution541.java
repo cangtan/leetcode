@@ -9,7 +9,6 @@ package com.leetcode.string.problem;
  */
 public class Solution541 {
     public String reverseStr(String s, int k) {
-        int length = s.length();
         char[] chars = s.toCharArray();
         int left = 0;
         while (s.length() - left > 0) {
