@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 子集II
  *
- * @author 薛佳豪
+ * @author cangtan
  * @version V1.0
  * @since 2023-06-29 09:10:00
  */
