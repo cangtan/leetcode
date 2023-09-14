@@ -1,8 +1,12 @@
 package com.leetcode.other.problem;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * 可以攻击国王的皇后
@@ -12,6 +16,82 @@ import java.util.List;
  * @since 2023-09-14 13:51:00
  */
 public class Solution1222 {
+    /**
+     * 从国王出发
+     * 作者：力扣官方题解
+     * 链接：<a href="https://leetcode.cn/problems/queens-that-can-attack-the-king/">力扣官方题解</a>
+     * 来源：力扣（LeetCode）
+     * 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+     */
+    public List<List<Integer>> queensAttacktheKing1(int[][] queens, int[] king) {
+        Set<Integer> queenPos = new HashSet<Integer>();
+        for (int[] queen : queens) {
+            int x = queen[0], y = queen[1];
+            queenPos.add(x * 8 + y);
+        }
+
+        List<List<Integer>> ans = new ArrayList<List<Integer>>();
+        for (int dx = -1; dx <= 1; ++dx) {
+            for (int dy = -1; dy <= 1; ++dy) {
+                if (dx == 0 && dy == 0) {
+                    continue;
+                }
+                int kx = king[0] + dx, ky = king[1] + dy;
+                while (kx >= 0 && kx < 8 && ky >= 0 && ky < 8) {
+                    int pos = kx * 8 + ky;
+                    if (queenPos.contains(pos)) {
+                        List<Integer> posList = new ArrayList<Integer>();
+                        posList.add(kx);
+                        posList.add(ky);
+                        ans.add(posList);
+                        break;
+                    }
+                    kx += dx;
+                    ky += dy;
+                }
+            }
+        }
+        return ans;
+    }
+
+    /**
+     * 从皇后出发
+     * 作者：力扣官方题解
+     * 链接：<a href="https://leetcode.cn/problems/queens-that-can-attack-the-king/">...</a>
+     * 来源：力扣（LeetCode）
+     * 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+     */
+    public List<List<Integer>> queensAttacktheKing2(int[][] queens, int[] king) {
+        Map<Integer, int[]> candidates = new HashMap<Integer, int[]>();
+        int kx = king[0], ky = king[1];
+        for (int[] queen : queens) {
+            int qx = queen[0], qy = queen[1];
+            int x = qx - kx, y = qy - ky;
+            if (x == 0 || y == 0 || Math.abs(x) == Math.abs(y)) {
+                int dx = sgn(x), dy = sgn(y);
+                int key = dx * 10 + dy;
+                if (!candidates.containsKey(key) || candidates.get(key)[2] > Math.abs(x) + Math.abs(y)) {
+                    candidates.put(key, new int[]{queen[0], queen[1], Math.abs(x) + Math.abs(y)});
+                }
+            }
+        }
+
+        List<List<Integer>> ans = new ArrayList<List<Integer>>();
+        for (Map.Entry<Integer, int[]> entry : candidates.entrySet()) {
+            int[] value = entry.getValue();
+            List<Integer> posList = new ArrayList<Integer>();
+            posList.add(value[0]);
+            posList.add(value[1]);
+            ans.add(posList);
+        }
+        return ans;
+    }
+
+    public int sgn(int x) {
+        return x > 0 ? 1 : (x == 0 ? 0 : -1);
+    }
+
+
     public List<List<Integer>> queensAttacktheKing(int[][] queens, int[] king) {
         List<List<Integer>> result = new LinkedList<>();
         int y = king[0];
