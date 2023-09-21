@@ -1,5 +1,7 @@
 package com.leetcode.tree;
 
+import java.util.Objects;
+
 /**
  * TreeNode
  *
@@ -59,5 +61,18 @@ public class TreeNode {
         TreeNode right = new TreeNode(3);
         TreeNode root = new TreeNode(2, left, right);
         postorderTraversal(root);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TreeNode treeNode = (TreeNode) o;
+        return val == treeNode.val && Objects.equals(left, treeNode.left) && Objects.equals(right, treeNode.right);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(val, left, right);
     }
 }
