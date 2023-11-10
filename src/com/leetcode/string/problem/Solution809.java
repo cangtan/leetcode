@@ -1,11 +1,5 @@
 package com.leetcode.string.problem;
 
-import com.leetcode.array.problem.Solution805;
-
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 /**
  * 情感丰富的文字
  *
