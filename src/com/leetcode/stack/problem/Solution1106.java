@@ -1,7 +1,5 @@
 package com.leetcode.stack.problem;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashSet;

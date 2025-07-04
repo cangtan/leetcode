@@ -1,7 +1,7 @@
 package com.leetcode.tree.problem;
 
 import com.leetcode.tree.TreeNode;
-import javafx.util.Pair;
+import com.leetcode.util.Pair;
 
 import java.util.LinkedList;
 
